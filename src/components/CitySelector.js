@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import AirQuality from "./AirQuality"
+import HistoricalObservation from './HistoricalObservations';
 
 const CitySelector = () => {
     const [city, setCity] = useState('')
@@ -17,6 +18,7 @@ const CitySelector = () => {
             <option value='94709'>Berkeley</option>
          </select> 
          {city && <AirQuality city={city} />}
+         {<HistoricalObservation/>}
         </div>
     )
 }
