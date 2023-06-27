@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import AirQualityHistory from "./AirQualityHistory";
 
 const AirQuality = ({ zipCode }) => {
   const [airQuality, setAirQuality] = useState(null);
@@ -26,6 +27,7 @@ const AirQuality = ({ zipCode }) => {
       <h2>Air Quality in {zipCode}</h2>
       <p>Location {airQuality.ReportingArea}</p>
       <p>Air Quality Index(AQI): {airQuality.AQI}</p>
+      <AirQualityHistory zipCode={zipCode}/>
     </div>
   );
 };
